@@ -23,7 +23,7 @@ requirements:
   run:
     - python
     - numpy
-    - matplotlib
+    - matplotlib-base
     - casadi
     - rbdl =*=*casadi*
     - biorbd =*=*casadi*
