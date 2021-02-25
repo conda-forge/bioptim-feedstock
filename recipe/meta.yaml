@@ -1,5 +1,5 @@
 {% set name = "bioptim" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/pyomeca/bioptim/archive/Release_{{ version }}.tar.gz
-  sha256: cc7858be7e423125d672d9a994f435f7adba74148669ec2f822ba302825ffdb3
+  sha256: 38ac65dca92bd911072ef5d64675884c42d63bd539b2e5a9e5dd1c25d396996e
 
 build:
-  number: 2
-  skip: True  # [py<37]
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  skip: true  # [py<37]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -39,7 +39,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "An optimization framework for Optimal Control Programming in biomechanics"
+  summary: An optimization framework for Optimal Control Programming in biomechanics
   description: |
     `Bioptim` is an optimal control program (OCP) framework for biomechanics.
     It is based on the efficient `biorbd` biomechanics library and befits from 
