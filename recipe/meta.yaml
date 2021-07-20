@@ -1,5 +1,5 @@
 {% set name = "bioptim" %}
-{% set version = "1.2.1" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/pyomeca/bioptim/archive/Release_{{ version }}.tar.gz
-  sha256: d19a85b2a8198b4b61e0185c633c3e1bd63d94d6218c87dab1a33734f389ae15
+  sha256: 0718ff7cd408a95a012b25b3e4fe2c91b80cbc9c1d0c0faec8b0aeb9c9a1c542
 
 build:
   number: 0
-  skip: true  # [py<37]
+  skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -24,9 +24,9 @@ requirements:
     - numpy
     - matplotlib-base
     - casadi
-    - rbdl =*=*casadi*
-    - biorbd =*=*casadi*
-    - bioviz =*=*casadi*
+    - rbdl
+    - biorbd
+    - bioviz
     - scipy
     - packaging
 
