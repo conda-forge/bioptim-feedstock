@@ -1,5 +1,5 @@
 {% set name = "bioptim" %}
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pyomeca/bioptim/archive/Release_{{ version }}.tar.gz
-  sha256: e895b6e565bc385d180d29f54c8c483388bb436728052487f8f8d875625c7f99
+  sha256: 2af25fb929b6d5ec20e123bfe91a594ab12c987e0825bfceaf573b911e68d15b
 
 build:
   number: 0
