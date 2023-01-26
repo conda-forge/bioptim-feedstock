@@ -10,7 +10,7 @@ source:
   sha256: 70205b1f35176f4ea4baa09b988d20ee8351e8c5a4a530bb2414e426a5b77945
 
 build:
-  number: 1
+  number: 2
   skip: true  # [py<310]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,6 +19,8 @@ requirements:
     - python
     - setuptools
     - pip
+    - biorbd
+    - bioviz
   run:
     - python
     - numpy
