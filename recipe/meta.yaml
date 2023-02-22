@@ -32,7 +32,7 @@ requirements:
     - biorbd
     - bioviz
     - scipy
-    - numpy
+    - {{ pin_compatible('numpy') }}
     - matplotlib-base
     - packaging
 
