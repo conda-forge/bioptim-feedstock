@@ -20,6 +20,7 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - setuptools
   host:
     - python
     - pip
@@ -32,7 +33,6 @@ requirements:
     - numpy
     - matplotlib-base
     - packaging
-    - setuptools
 
 test:
   imports:
