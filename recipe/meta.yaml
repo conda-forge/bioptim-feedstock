@@ -27,6 +27,7 @@ requirements:
     - python
     - biorbd
     - bioviz
+    - casadi
     - scipy
     - numpy
     - matplotlib-base
