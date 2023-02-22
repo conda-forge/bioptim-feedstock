@@ -24,11 +24,12 @@ requirements:
   host:
     - python
     - pip
+    - biorbd
+    - bioviz
   run:
     - python
     - biorbd
     - bioviz
-    - casadi
     - scipy
     - numpy
     - matplotlib-base
