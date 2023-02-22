@@ -21,12 +21,12 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
-    - setuptools
   host:
     - python
     - pip
     - biorbd
     - bioviz
+    - setuptools
   run:
     - python
     - biorbd
