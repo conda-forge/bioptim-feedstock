@@ -23,7 +23,6 @@ requirements:
   host:
     - python
     - pip
-    - setuptools
   run:
     - python
     - biorbd
@@ -33,6 +32,7 @@ requirements:
     - numpy
     - matplotlib-base
     - packaging
+    - setuptools
 
 test:
   imports:
