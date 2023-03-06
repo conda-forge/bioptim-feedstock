@@ -1,35 +1,39 @@
 {% set name = "bioptim" %}
-{% set version = "3.0.0" %}
+{% set version = "3.0.1" %}
+{% set build_num = 0 %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/pyomeca/bioptim/archive/Release_{{ version }}.tar.gz
-  sha256: 70205b1f35176f4ea4baa09b988d20ee8351e8c5a4a530bb2414e426a5b77945
+  url: https://github.com/pyomeca/{{ name }}/archive/Release_{{ version }}.tar.gz
+  sha256: 9ef574b0cb2480ac4e6128cffa8f6597efc33b9af84c9c7106eeab65e9660a0b
 
 build:
-  number: 2
+  number: {{ build_num }}
+  string: py{{ py }}_h{{ PKG_HASH }}_{{ build_num }}
   skip: true  # [py<310]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
+  build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - numpy >=1.21.0                         # [build_platform != target_platform]
   host:
     - python
-    - setuptools
     - pip
     - biorbd
     - bioviz
+    - setuptools
   run:
     - python
-    - numpy
-    - matplotlib-base
-    - casadi
-    - rbdl
     - biorbd
     - bioviz
     - scipy
+    - {{ pin_compatible('numpy') }}
+    - matplotlib-base
     - packaging
 
 test:
