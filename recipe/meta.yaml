@@ -9,7 +9,6 @@ package:
 source:
   git_url: https://github.com/pyomeca/{{ name }}.git
   git_tag: Release_{{ version }}
-  git_submodules: true
 
 build:
   number: {{ build_num }}
