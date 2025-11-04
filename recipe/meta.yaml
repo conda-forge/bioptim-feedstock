@@ -7,8 +7,9 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/pyomeca/{{ name }}/archive/Release_{{ version }}.tar.gz
-  sha256: 6a8d5ec5ea540d02acc043c09b37b6820d2f190080a831b927399abd6894ed51
+  git_url: https://github.com/pyomeca/{{ name }}.git
+  git_tag: Release_{{ version }}
+  git_submodules: true
 
 build:
   number: {{ build_num }}
