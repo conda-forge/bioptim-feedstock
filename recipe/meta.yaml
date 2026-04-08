@@ -25,12 +25,10 @@ requirements:
     - python
     - pip
     - biorbd
-    - bioviz
     - setuptools
   run:
     - python
     - biorbd
-    - bioviz
     - scipy
     - {{ pin_compatible('numpy') }}
     - matplotlib-base
