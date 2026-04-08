@@ -17,10 +17,15 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
+  build:
+    - python                                 # [osx and arm64]
+    - {{ compiler('c') }}                    # [osx and arm64]
+    - {{ compiler('cxx') }}                  # [osx and arm64]
   host:
     - python
     - pip
     - biorbd
+    - numpy
     - setuptools
   run:
     - python
