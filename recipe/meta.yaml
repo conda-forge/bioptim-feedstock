@@ -25,7 +25,6 @@ requirements:
     - python
     - pip
     - biorbd
-    - numpy
     - setuptools
   run:
     - python
