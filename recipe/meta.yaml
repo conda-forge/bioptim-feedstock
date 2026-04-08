@@ -1,6 +1,6 @@
 {% set name = "bioptim" %}
 {% set version = "3.4.0" %}
-{% set build_num = 1 %}
+{% set build_num = 2 %}
 
 package:
   name: {{ name|lower }}
@@ -25,12 +25,10 @@ requirements:
     - python
     - pip
     - biorbd
-    - bioviz
     - setuptools
   run:
     - python
     - biorbd
-    - bioviz
     - scipy
     - {{ pin_compatible('numpy') }}
     - matplotlib-base
@@ -38,7 +36,7 @@ requirements:
 
 test:
   imports:
-    - bioptim
+    - bioptim  # [not (osx and arm64)]
 
 about:
   home: https://github.com/pyomeca/bioptim
