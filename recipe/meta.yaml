@@ -36,8 +36,7 @@ requirements:
 
 test:
   imports:
-    - bioptim
-  skip: true  # [osx and arm64]
+    - bioptim  # [not (osx and arm64)]
 
 about:
   home: https://github.com/pyomeca/bioptim
